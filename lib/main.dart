@@ -6,7 +6,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'loginPage',
     routes: {
-      'loginPage':(context)=>login()
+      'loginPage':(context)=>login(),
     },
   ));
 }
