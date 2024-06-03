@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:login_page/SignUp.dart';
+import 'package:login_page/home_page.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -77,9 +79,16 @@ class _loginState extends State<login> {
                     SizedBox(
                       height: 10,
                     ),
-                    TextButton(onPressed: (){}, child: Text('Sign In', style: TextStyle(
+                    TextButton(onPressed: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context)=>Home_Page())
+                      );
+                    }, child: Text('Sign In', style: TextStyle(
                       color: Colors.deepOrangeAccent
-                    ),)),
+                    ),
+                    )
+                    ),
                     SizedBox(
                       height: 15,
                     ),
@@ -88,7 +97,12 @@ class _loginState extends State<login> {
                         Text("    Don't have an account?",style: TextStyle(
                         ),
                         ),
-                        TextButton(onPressed: (){}, child: Text('Sign Up',style: TextStyle(
+                        TextButton(onPressed: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context)=> const SignupPage1())
+                          );
+                        }, child: Text('Sign Up',style: TextStyle(
                           decoration: TextDecoration.underline, color: Colors.deepOrangeAccent
                         ),)),
                       ],
